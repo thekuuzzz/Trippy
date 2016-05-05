@@ -1,0 +1,10 @@
+﻿{
+  "Data": {
+    "DefaultConnection": {
+      "TripsConnectionString": "Data Source=(localdb)MSSQLLocalDB; Initial Catalog=TripContext-20160303131035; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|TripContext-20160303131035.mdf"
+    }
+  },
+  "AppSettings": {
+    "BingKey": "AkMdA5nhYV3MPNmbdZ65d7r4XDVs4xKUsM3dkd6urDtqGl8t6cbwL-XPwHMAUjCz"
+  }
+}

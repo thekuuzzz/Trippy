@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+@model IEnumerable<WebApplication2.Models.Trip>
+[Authorize]
+<body>
+
+    <div id="wrapper">
+        <div id="main">
+            <h1>@ViewBag.Title = "Index";</h1>
+            <p>@Html.ActionLink("Get Trippy", "Index")</p>
+
+            <form>
+                <div>
+                    <label>Tripp</label>
+                    <input  @Html.DisplayNameFor(model => model.Name)/>
+                </div>
+                <div>
+                    <label>Location</label>
+                    <input  @Html.DisplayNameFor(model => model.DateCreated) />
+                </div>
+                <div><input type="submit" value="Add" /></div>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

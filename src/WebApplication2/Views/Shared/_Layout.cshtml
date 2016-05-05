@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+        <title>MVC 6</title>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+    <div class="navbar-collapse collapse">
+        @await Html.PartialAsync("_LoginPartial")
+    </div>
+
+    <div>
+        @RenderBody()
+        <div id="sidebar">
+            <img src="~/img/user1.png" alt="headshot" class="headshot" />
+            <span>Bill G.</span>
+            <ul class="menu">
+                <li class="active"><a asp-controller= "Home" asp-action="Index">Home</a></li>
+                <li><<a asp-controller= "About" asp-action="About">About</a></li>
+                <li><a asp-controller= "Contact" asp-action="Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    function showMap(stops) {
+
+    if (stops && stops.length > 0) {
+
+    var mapStops = _.map(stops, function (item) {
+    return {
+    lat: item.Latitude,
+    long: item.Longitude,
+    info: item.Name
+    };
+    });
+
+    // Show Map
+    travelMap.createMap({
+    stops: mapStops,
+    selector: "#map",
+    currentStop: 1,
+    initialZoom: 3
+    });
+
+    }
+    }
+
+    </script>
+    <div id="footer">
+        &copy; 2016 CSIS 4135 Ltd.
+
+    </div>
+</body>
+</html>
